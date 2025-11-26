@@ -1,0 +1,15 @@
+{
+  "name": "func_app_or2dt",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/digital-twins-core": "^2.0.0",
+    "@azure/functions": "^4.0.0",
+    "@azure/identity": "^4.13.0"
+  },
+  "main": "src/{index.js,functions/*.js}"
+}
