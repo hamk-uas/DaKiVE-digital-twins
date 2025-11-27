@@ -131,7 +131,7 @@ function DecodeElsysPayload(data) {
         case TYPE_OCCUPANCY: //Body occupancy
             obj.occupancy = (data[i + 1]);
             i += 1;
-            break
+            
         case TYPE_WATERLEAK: //Water leak
             obj.waterleak = (data[i + 1]);
             i += 1;

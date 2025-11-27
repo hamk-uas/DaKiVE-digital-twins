@@ -9,8 +9,8 @@ const { json } = require('stream/consumers');
 const httpsAgent = new https.Agent({ rejectUnauthorized: false });
 
 const authConfig = {
-    authUrl: "https://172.160.243.127/auth/realms/master/protocol/openid-connect/token",
-    clientID: "user1",
+    authUrl: "https://<openremote domain>/auth/realms/master/protocol/openid-connect/token", //openremote authentication endpoint
+    clientID: "", //client ID from openremote 
     clientSecret: "",
     refreshToken: null,
     accessToken: null,
@@ -49,7 +49,7 @@ const getAuthToken = async () => {
 };
 
 const fetchDataAndSearch = async (searchString) => {
-    const apiEndpoint = "https://172.160.243.127/api/master/asset/query";
+    const apiEndpoint = "https://<openremote domain>/api/master/asset/query";
 
     const getValidToken = async () => {
         if (!authConfig.accessToken || Date.now() >= authConfig.tokenExpiry) {
@@ -101,7 +101,7 @@ const fetchDataAndSearch = async (searchString) => {
 };
 
 const createAsset = async (assetData) => {
-    const apiUrl = "https://172.160.243.127/api/master/asset";
+    const apiUrl = "https://<openremote domain>/api/master/asset";
     const token = await getAuthToken();
 
     const requestBody = {

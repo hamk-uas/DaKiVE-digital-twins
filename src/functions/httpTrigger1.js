@@ -58,7 +58,7 @@ app.http('httpTrigger1', {
                 { "ref": { "id": AssetID, "name": "VOC" }, "value": data.tvoc || null }
               ];
 
-            const putEndpoint = "https://172.160.243.127/api/master/asset/attributes" //`https://172.160.243.127/api/master/asset/${AssetID}`; // endpoint for openremote API PUT req  
+            const putEndpoint = "https://<openremote domain>/api/master/asset/attributes" //endpoint for openremote API PUT req  
             let token = await getAuthToken();
             
             try {
