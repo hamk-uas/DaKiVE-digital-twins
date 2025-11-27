@@ -11,7 +11,7 @@ const httpsAgent = new https.Agent({ rejectUnauthorized: false });
 const authConfig = {
     authUrl: "https://172.160.243.127/auth/realms/master/protocol/openid-connect/token",
     clientID: "user1",
-    clientSecret: "ZziPgAhiL9zC6G2gy8M3DJXcXdwcwIqg",
+    clientSecret: "",
     refreshToken: null,
     accessToken: null,
     tokenExpiry: 0 
